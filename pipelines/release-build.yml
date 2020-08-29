@@ -59,3 +59,5 @@ stages:
             gitHubConnection: azurepipelines
             repositoryName: aadversteeg/Ave.Extensions.Text
             assets: $(Pipeline.Workspace)/**/*.nupkg
+        - script: dotnet nuget push $(Pipeline.Workspace)/drop/Ave.Extensions.Text.$(PackageVersion).nupkg --source https://api.nuget.org/v3/index.json --api-key $(nuget-apikey)
+
