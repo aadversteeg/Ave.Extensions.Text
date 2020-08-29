@@ -5,6 +5,7 @@ trigger:
       
 variables:
   BuildConfiguration: 'Release'
+  PackageVersion: $[replace(variables['Build.SourceBranch'], 'refs/tags/v', '')]
 
 stages:
   - stage: Build
@@ -47,7 +48,8 @@ stages:
     jobs:
       - job: Publish
         pool: Hosted Windows 2019 with VS2019
-        steps:       
+        steps:
+        - script: echo $(PackageVersion)
         - checkout: none
         - download: current
         - task: GithubRelease@0 
