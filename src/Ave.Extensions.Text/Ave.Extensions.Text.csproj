@@ -6,7 +6,6 @@
     <PackageProjectUrl>https://github.com/aadversteeg/Ave.Extensions.Text</PackageProjectUrl>
     <RepositoryUrl>https://github.com/aadversteeg/Ave.Extensions.Text</RepositoryUrl>
     <Version>1.0.0</Version>
-    <RepositoryType>git</RepositoryType>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Company>Versteeg IT Solutions</Company>
     <Copyright>Versteeg IT Solutions / Aad Versteeg</Copyright>
