@@ -29,3 +29,17 @@ stages:
             command: test
             projects: '**/UnitTests*.csproj'
             arguments: '--configuration $(BuildConfiguration)'
+            
+  - stage: Publish
+    jobs:
+      - job: Publish
+        pool: Hosted Windows 2019 with VS2019
+        steps:       
+
+      - task: GithubRelease@0 
+        displayName: 'Create GitHub Release'   
+        condition: startsWith(variables['Build.SourceBranch'], 'refs/tags/release-v')   
+        inputs:
+          gitHubConnection: aadversteeg
+          repositoryName: aadversteeg/Ave.Extensions.Text           
+          assets: $(Build.ArtifactStagingDirectory)/*.exe
