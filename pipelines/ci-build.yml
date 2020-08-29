@@ -41,5 +41,5 @@ stages:
           condition: startsWith(variables['Build.SourceBranch'], 'refs/tags/release-v')   
           inputs:
             gitHubConnection: aadversteeg
-            repositoryName: aadversteeg/Ave.Extensions.Text           
+            repositoryName: aadversteeg/Ave.Extensions.Text
             assets: $(Build.ArtifactStagingDirectory)/*.exe
