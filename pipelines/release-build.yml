@@ -48,7 +48,8 @@ stages:
       - job: Publish
         pool: Hosted Windows 2019 with VS2019
         steps:       
-
+        - checkout: none
+        - download: current
         - task: GithubRelease@0 
           displayName: 'Create GitHub Release'   
           inputs:
