@@ -54,4 +54,4 @@ stages:
           inputs:
             gitHubConnection: azurepipelines
             repositoryName: aadversteeg/Ave.Extensions.Text
-            assets: $(Build.ArtifactStagingDirectory)/*.exe
+            assets: $(Build.ArtifactStagingDirectory)/*.nupkg
