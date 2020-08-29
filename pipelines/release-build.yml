@@ -5,7 +5,7 @@ trigger:
       
 variables:
   BuildConfiguration: 'Release'
-  Onzin: $[replace(variables['Build.SourceBranch'], 'refs/tags/v', '')]
+  PackageVersion: $[replace(variables['Build.SourceBranch'], 'refs/tags/v', '')]
 
 stages:
   - stage: Build
@@ -50,7 +50,7 @@ stages:
       - job: Publish
         pool: Hosted Windows 2019 with VS2019
         steps:
-        - script: echo $(Onzin)
+        - script: echo $(PackageVersion)
         - checkout: none
         - download: current
         - task: GithubRelease@0 
