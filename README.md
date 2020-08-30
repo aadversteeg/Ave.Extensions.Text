@@ -4,6 +4,6 @@
 [![Nuget downloads](https://img.shields.io/nuget/v/Ave.Extensions.Text.svg)](https://www.nuget.org/packages/Ave.Extensions.Text/)
 [![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/aadversteeg/ave.extensions.text/blob/master/LICENSE)
 
-Nuget package containg text extensions for .NET.
+Nuget package containing text extensions for .NET.
 
 Luhn32:  Calculating checksum or validating checksum for base32. Based upon the [Luhn](https://en.wikipedia.org/wiki/Luhn_algorithm) algorithm.
